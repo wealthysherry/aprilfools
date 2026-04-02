@@ -1,0 +1,1993 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 103 | Scripts: 22 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.Honey
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[Honey]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.Honey.honeyyfehax
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["ZIndex"] = 14;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["2"]["Size"] = UDim2.new(0, 345, 0, 20);
+G2L["2"]["Position"] = UDim2.new(0.08496, 0, 0.1571, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[honeyyfehax]];
+
+
+-- StarterGui.Honey.honeyyfehax.Drag
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+G2L["3"]["Name"] = [[Drag]];
+
+
+-- StarterGui.Honey.honeyyfehax.Frame
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 38);
+G2L["4"]["ClipsDescendants"] = true;
+G2L["4"]["Size"] = UDim2.new(0, 345, 0, 425);
+G2L["4"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.LocalScript
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.gamesss
+G2L["6"] = Instance.new("Frame", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(0, 136, 203);
+G2L["6"]["Size"] = UDim2.new(0, 199, 0, 35);
+G2L["6"]["Position"] = UDim2.new(0.2087, 0, 0.764, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[gamesss]];
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.gamesss.ingamecodepls
+G2L["7"] = Instance.new("TextButton", G2L["6"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 18;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 200, 0, 35);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Name"] = [[ingamecodepls]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Find In-Game Codes]];
+G2L["7"]["Position"] = UDim2.new(-0.00228, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.gamesss.ingamecodepls.LocalScript
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.gamesss.UIStroke
+G2L["9"] = Instance.new("UIStroke", G2L["6"]);
+G2L["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["9"]["Color"] = Color3.fromRGB(37, 37, 37);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.gamesss.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["6"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.btcdss
+G2L["b"] = Instance.new("Frame", G2L["4"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(0, 136, 203);
+G2L["b"]["Size"] = UDim2.new(0, 200, 0, 35);
+G2L["b"]["Position"] = UDim2.new(0.20797, 0, 0.87629, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Name"] = [[btcdss]];
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.btcdss.ctcodses
+G2L["c"] = Instance.new("TextButton", G2L["b"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextSize"] = 18;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c"]["Size"] = UDim2.new(0, 200, 0, 35);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Name"] = [[ctcodses]];
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Find Server Script Bytecode]];
+G2L["c"]["Position"] = UDim2.new(0.00314, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.btcdss.ctcodses.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.btcdss.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["b"]);
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["e"]["Color"] = Color3.fromRGB(37, 37, 37);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.btcdss.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["b"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.ImageLabel
+G2L["10"] = Instance.new("ImageLabel", G2L["4"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["Image"] = [[rbxassetid://81623568673658]];
+G2L["10"]["Size"] = UDim2.new(0, 60, 0, 60);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["BackgroundTransparency"] = 1;
+G2L["10"]["Position"] = UDim2.new(0.41159, 0, 0.01647, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.TextLabel
+G2L["11"] = Instance.new("TextLabel", G2L["4"]);
+G2L["11"]["Interactable"] = false;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 18;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Welcome to Dex Honey]];
+G2L["11"]["Position"] = UDim2.new(0.2087, 0, 0.17882, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.TextLabel
+G2L["12"] = Instance.new("TextLabel", G2L["4"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["Interactable"] = false;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["BackgroundTransparency"] = 1;
+G2L["12"]["Size"] = UDim2.new(0, 345, 0, 64);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Dex Honey is the result of a partnership between the Secret Service and PayPal  Inc. Using a revolutionary AI solution, Dex Honey helps the user find all redeemable in-game codes, or server script bytecode hiding in memory.]];
+G2L["12"]["Position"] = UDim2.new(-0, 0, 0.24, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.Frame
+G2L["13"] = Instance.new("Frame", G2L["4"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Size"] = UDim2.new(0, 125, 0, 125);
+G2L["13"]["Position"] = UDim2.new(0.31884, 0, 0.42824, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.Frame.bbb
+G2L["14"] = Instance.new("ImageLabel", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Image"] = [[rbxassetid://74480148927928]];
+G2L["14"]["Size"] = UDim2.new(0, 159, 0, 159);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["BackgroundTransparency"] = 1;
+G2L["14"]["Name"] = [[bbb]];
+G2L["14"]["Position"] = UDim2.new(-0.14516, 0, -0.13176, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Frame.Frame.bbb.LocalScript
+G2L["15"] = Instance.new("LocalScript", G2L["14"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Minimize
+G2L["16"] = Instance.new("TextButton", G2L["2"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["AutoButtonColor"] = false;
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["Size"] = UDim2.new(0, 16, 0, 16);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Name"] = [[Minimize]];
+G2L["16"]["Text"] = [[]];
+G2L["16"]["Position"] = UDim2.new(1, -36, 0, 2);
+
+
+-- StarterGui.Honey.honeyyfehax.Minimize.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["16"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Minimize.ImageLabel
+G2L["18"] = Instance.new("ImageLabel", G2L["16"]);
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Image"] = [[rbxassetid://5034768003]];
+G2L["18"]["Size"] = UDim2.new(0, 10, 0, 10);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Position"] = UDim2.new(0, 3, 0, 3);
+
+
+-- StarterGui.Honey.honeyyfehax.Minimize.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["16"]);
+G2L["19"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.Honey.honeyyfehax.Close
+G2L["1a"] = Instance.new("TextButton", G2L["2"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["AutoButtonColor"] = false;
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["Size"] = UDim2.new(0, 16, 0, 16);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Name"] = [[Close]];
+G2L["1a"]["Text"] = [[]];
+G2L["1a"]["Position"] = UDim2.new(1, -18, 0, 2);
+
+
+-- StarterGui.Honey.honeyyfehax.Close.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["1a"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.Close.ImageLabel
+G2L["1c"] = Instance.new("ImageLabel", G2L["1a"]);
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Image"] = [[rbxassetid://5054663650]];
+G2L["1c"]["Size"] = UDim2.new(0, 10, 0, 10);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Position"] = UDim2.new(0, 3, 0, 3);
+
+
+-- StarterGui.Honey.honeyyfehax.Close.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1d"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.Honey.honeyyfehax.TextLabel
+G2L["1e"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextSize"] = 14;
+G2L["1e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Size"] = UDim2.new(0, 95, 0, 19);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[  Dex honey]];
+G2L["1e"]["Position"] = UDim2.new(0, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.finding
+G2L["1f"] = Instance.new("Frame", G2L["2"]);
+G2L["1f"]["Visible"] = false;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 38);
+G2L["1f"]["ClipsDescendants"] = true;
+G2L["1f"]["Size"] = UDim2.new(0, 345, 0, 425);
+G2L["1f"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Name"] = [[finding]];
+
+
+-- StarterGui.Honey.honeyyfehax.finding.LocalScript
+G2L["20"] = Instance.new("LocalScript", G2L["1f"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.finding.ImageLabel
+G2L["21"] = Instance.new("ImageLabel", G2L["1f"]);
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["Image"] = [[rbxassetid://81623568673658]];
+G2L["21"]["Size"] = UDim2.new(0, 60, 0, 60);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Position"] = UDim2.new(0.41159, 0, 0.01647, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.finding.TextLabel
+G2L["22"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["22"]["Interactable"] = false;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 18;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["BackgroundTransparency"] = 1;
+G2L["22"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[Finding Server Script Bytecode]];
+G2L["22"]["Position"] = UDim2.new(0.2087, 0, 0.17882, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.finding.TextLabel
+G2L["23"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["Interactable"] = false;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Size"] = UDim2.new(0, 345, 0, 64);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[We will now retrieve a certain amount of available server memory using our 0day memory reading method before processing it with our AI engine to find traces of server script bytecode.]];
+G2L["23"]["Position"] = UDim2.new(-0, 0, 0.24, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.finding.Frame
+G2L["24"] = Instance.new("Frame", G2L["1f"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Size"] = UDim2.new(0, 125, 0, 125);
+G2L["24"]["Position"] = UDim2.new(0.31884, 0, 0.42824, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Honey.honeyyfehax.finding.Frame.bbb
+G2L["25"] = Instance.new("ImageLabel", G2L["24"]);
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["Image"] = [[rbxassetid://122127867551155]];
+G2L["25"]["Size"] = UDim2.new(0, 125, 0, 151);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Name"] = [[bbb]];
+G2L["25"]["Position"] = UDim2.new(-0.00916, 0, -0.13176, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.finding.Frame.bbb.LocalScript
+G2L["26"] = Instance.new("LocalScript", G2L["25"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.finding.TextLabel
+G2L["27"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["27"]["TextWrapped"] = true;
+G2L["27"]["Interactable"] = false;
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["TextSize"] = 18;
+G2L["27"]["TextScaled"] = true;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["27"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Text"] = [[Status]];
+G2L["27"]["Position"] = UDim2.new(0.2087, 0, 0.88, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.finding.TextLabel.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["27"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.found
+G2L["29"] = Instance.new("Frame", G2L["2"]);
+G2L["29"]["Visible"] = false;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 38);
+G2L["29"]["ClipsDescendants"] = true;
+G2L["29"]["Size"] = UDim2.new(0, 345, 0, 425);
+G2L["29"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Name"] = [[found]];
+
+
+-- StarterGui.Honey.honeyyfehax.found.LocalScript
+G2L["2a"] = Instance.new("LocalScript", G2L["29"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.found.ImageLabel
+G2L["2b"] = Instance.new("ImageLabel", G2L["29"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["Image"] = [[rbxassetid://81623568673658]];
+G2L["2b"]["Size"] = UDim2.new(0, 60, 0, 60);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["Position"] = UDim2.new(0.41159, 0, 0.01647, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.TextLabel
+G2L["2c"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2c"]["Interactable"] = false;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextSize"] = 18;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["BackgroundTransparency"] = 1;
+G2L["2c"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[- Server Scripts Reconstructed!]];
+G2L["2c"]["Position"] = UDim2.new(0.2087, 0, 0.17882, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.TextLabel
+G2L["2d"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["Interactable"] = false;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextSize"] = 14;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Size"] = UDim2.new(0, 345, 0, 64);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[Here are the server scripts that Dex Honey was able to reconstruct bytecode for. Click them to open Script Viewer! Please note that it may not contain all scripts, results may vary per server and you may have to repeat this in different servers if you want all server scripts.]];
+G2L["2d"]["Position"] = UDim2.new(-0, 0, 0.22588, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.TextLabel
+G2L["2e"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["Interactable"] = false;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 15;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(0, 142, 0, 86);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[Support Dex Honey by making an in-game purchase!]];
+G2L["2e"]["Position"] = UDim2.new(-0, 0, 0.81301, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.btcdss
+G2L["2f"] = Instance.new("Frame", G2L["29"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(0, 136, 203);
+G2L["2f"]["Size"] = UDim2.new(0, 197, 0, 35);
+G2L["2f"]["Position"] = UDim2.new(0.4087, 0, 0.881, 0);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["Name"] = [[btcdss]];
+
+
+-- StarterGui.Honey.honeyyfehax.found.btcdss.ctcodses
+G2L["30"] = Instance.new("TextButton", G2L["2f"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["TextSize"] = 18;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43);
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["30"]["Size"] = UDim2.new(0, 166, 0, 35);
+G2L["30"]["BackgroundTransparency"] = 1;
+G2L["30"]["Name"] = [[ctcodses]];
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[Back to Home]];
+G2L["30"]["Position"] = UDim2.new(0.07786, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.btcdss.ctcodses.LocalScript
+G2L["31"] = Instance.new("LocalScript", G2L["30"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.found.btcdss.UIStroke
+G2L["32"] = Instance.new("UIStroke", G2L["2f"]);
+G2L["32"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["32"]["Color"] = Color3.fromRGB(37, 37, 37);
+
+
+-- StarterGui.Honey.honeyyfehax.found.btcdss.UICorner
+G2L["33"] = Instance.new("UICorner", G2L["2f"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.found.Frame
+G2L["34"] = Instance.new("Frame", G2L["29"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["34"]["Size"] = UDim2.new(0, 177, 0, 187);
+G2L["34"]["Position"] = UDim2.new(0.46956, 0, 0.39059, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.Frame.UIStroke
+G2L["35"] = Instance.new("UIStroke", G2L["34"]);
+G2L["35"]["Color"] = Color3.fromRGB(68, 68, 68);
+
+
+-- StarterGui.Honey.honeyyfehax.found.Frame.ScrollingFrame
+G2L["36"] = Instance.new("ScrollingFrame", G2L["34"]);
+G2L["36"]["Active"] = true;
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["CanvasSize"] = UDim2.new(0, 0, 999999, 0);
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["36"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["ScrollBarThickness"] = 0;
+G2L["36"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Honey.honeyyfehax.found.Frame.ScrollingFrame.UIListLayout
+G2L["37"] = Instance.new("UIListLayout", G2L["36"]);
+G2L["37"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.Honey.honeyyfehax.found.Frame.ScrollingFrame.TextButton
+G2L["38"] = Instance.new("TextButton", G2L["36"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["TextScaled"] = true;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["Size"] = UDim2.new(0, 178, 0, 32);
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[game.ReplicatedStorage.Vivio]];
+
+
+-- StarterGui.Honey.honeyyfehax.found.Frame.UIStroke
+G2L["39"] = Instance.new("UIStroke", G2L["34"]);
+G2L["39"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["39"]["Color"] = Color3.fromRGB(68, 68, 68);
+
+
+-- StarterGui.Honey.honeyyfehax.found.bbb
+G2L["3a"] = Instance.new("ImageLabel", G2L["29"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["Image"] = [[rbxassetid://79782069696233]];
+G2L["3a"]["Size"] = UDim2.new(0, 199, 0, 200);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Name"] = [[bbb]];
+G2L["3a"]["Position"] = UDim2.new(-0.05507, 0, 0.35765, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.found.bbb.LocalScript
+G2L["3b"] = Instance.new("LocalScript", G2L["3a"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode
+G2L["3c"] = Instance.new("Frame", G2L["2"]);
+G2L["3c"]["Visible"] = false;
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 38);
+G2L["3c"]["ClipsDescendants"] = true;
+G2L["3c"]["Size"] = UDim2.new(0, 345, 0, 425);
+G2L["3c"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Name"] = [[findingcode]];
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.LocalScript
+G2L["3d"] = Instance.new("LocalScript", G2L["3c"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.ImageLabel
+G2L["3e"] = Instance.new("ImageLabel", G2L["3c"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["Image"] = [[rbxassetid://81623568673658]];
+G2L["3e"]["Size"] = UDim2.new(0, 60, 0, 60);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["Position"] = UDim2.new(0.41159, 0, 0.01647, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.TextLabel
+G2L["3f"] = Instance.new("TextLabel", G2L["3c"]);
+G2L["3f"]["Interactable"] = false;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TextSize"] = 18;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["BackgroundTransparency"] = 1;
+G2L["3f"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Text"] = [[Finding In-Game Codes]];
+G2L["3f"]["Position"] = UDim2.new(0.2087, 0, 0.17882, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.TextLabel
+G2L["40"] = Instance.new("TextLabel", G2L["3c"]);
+G2L["40"]["TextWrapped"] = true;
+G2L["40"]["Interactable"] = false;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["TextSize"] = 14;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["BackgroundTransparency"] = 1;
+G2L["40"]["Size"] = UDim2.new(0, 345, 0, 42);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[Please wait while our AI engine processes the available data on the client and server to find all in-game codes.]];
+G2L["40"]["Position"] = UDim2.new(-0, 0, 0.24, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.Frame
+G2L["41"] = Instance.new("Frame", G2L["3c"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["Size"] = UDim2.new(0, 125, 0, 125);
+G2L["41"]["Position"] = UDim2.new(0.31884, 0, 0.42824, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.Frame.bbb
+G2L["42"] = Instance.new("ImageLabel", G2L["41"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["Image"] = [[rbxassetid://122127867551155]];
+G2L["42"]["Size"] = UDim2.new(0, 125, 0, 151);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["BackgroundTransparency"] = 1;
+G2L["42"]["Name"] = [[bbb]];
+G2L["42"]["Position"] = UDim2.new(-0.00916, 0, -0.13176, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.Frame.bbb.LocalScript
+G2L["43"] = Instance.new("LocalScript", G2L["42"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.TextLabel
+G2L["44"] = Instance.new("TextLabel", G2L["3c"]);
+G2L["44"]["TextWrapped"] = true;
+G2L["44"]["Interactable"] = false;
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["TextSize"] = 18;
+G2L["44"]["TextScaled"] = true;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["44"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["BackgroundTransparency"] = 1;
+G2L["44"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Text"] = [[Status]];
+G2L["44"]["Position"] = UDim2.new(0.2087, 0, 0.88, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.findingcode.TextLabel.LocalScript
+G2L["45"] = Instance.new("LocalScript", G2L["44"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes
+G2L["46"] = Instance.new("Frame", G2L["2"]);
+G2L["46"]["Visible"] = false;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 38);
+G2L["46"]["ClipsDescendants"] = true;
+G2L["46"]["Size"] = UDim2.new(0, 345, 0, 425);
+G2L["46"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Name"] = [[foundcodes]];
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.LocalScript
+G2L["47"] = Instance.new("LocalScript", G2L["46"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.ImageLabel
+G2L["48"] = Instance.new("ImageLabel", G2L["46"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["Image"] = [[rbxassetid://81623568673658]];
+G2L["48"]["Size"] = UDim2.new(0, 60, 0, 60);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Position"] = UDim2.new(0.41159, 0, 0.01647, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.TextLabel
+G2L["49"] = Instance.new("TextLabel", G2L["46"]);
+G2L["49"]["Interactable"] = false;
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["TextSize"] = 18;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["BackgroundTransparency"] = 1;
+G2L["49"]["Size"] = UDim2.new(0, 200, 0, 20);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[- Codes Found!]];
+G2L["49"]["Position"] = UDim2.new(0.2087, 0, 0.17882, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.TextLabel
+G2L["4a"] = Instance.new("TextLabel", G2L["46"]);
+G2L["4a"]["TextWrapped"] = true;
+G2L["4a"]["Interactable"] = false;
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 14;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["BackgroundTransparency"] = 1;
+G2L["4a"]["Size"] = UDim2.new(0, 345, 0, 64);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Text"] = [[Here are all the codes that Dex Honey has found in this game. Click to copy! Please note that Dex Honey may have found non-public codes as well. Dex Honey can also attempt to auto-redeem these codes! Auto-redeem is attempted though normal means.]];
+G2L["4a"]["Position"] = UDim2.new(-0, 0, 0.22588, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.btcdss
+G2L["4b"] = Instance.new("Frame", G2L["46"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(0, 136, 203);
+G2L["4b"]["Size"] = UDim2.new(0, 155, 0, 35);
+G2L["4b"]["Position"] = UDim2.new(0.53043, 0, 0.881, 0);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Name"] = [[btcdss]];
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.btcdss.ctcodses
+G2L["4c"] = Instance.new("TextButton", G2L["4b"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["TextSize"] = 18;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43);
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4c"]["Size"] = UDim2.new(0, 113, 0, 35);
+G2L["4c"]["BackgroundTransparency"] = 1;
+G2L["4c"]["Name"] = [[ctcodses]];
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[Back to Home]];
+G2L["4c"]["Position"] = UDim2.new(0.13222, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.btcdss.ctcodses.LocalScript
+G2L["4d"] = Instance.new("LocalScript", G2L["4c"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.btcdss.UIStroke
+G2L["4e"] = Instance.new("UIStroke", G2L["4b"]);
+G2L["4e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["4e"]["Color"] = Color3.fromRGB(37, 37, 37);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.btcdss.UICorner
+G2L["4f"] = Instance.new("UICorner", G2L["4b"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.audrm
+G2L["50"] = Instance.new("Frame", G2L["46"]);
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(0, 136, 203);
+G2L["50"]["Size"] = UDim2.new(0, 155, 0, 35);
+G2L["50"]["Position"] = UDim2.new(0.01739, 0, 0.881, 0);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Name"] = [[audrm]];
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.audrm.auuudddd
+G2L["51"] = Instance.new("TextButton", G2L["50"]);
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["TextSize"] = 18;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(43, 43, 43);
+G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["51"]["Size"] = UDim2.new(0, 113, 0, 35);
+G2L["51"]["BackgroundTransparency"] = 1;
+G2L["51"]["Name"] = [[auuudddd]];
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["Text"] = [[Auto-Redeem]];
+G2L["51"]["Position"] = UDim2.new(0.13222, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.audrm.auuudddd.LocalScript
+G2L["52"] = Instance.new("LocalScript", G2L["51"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.audrm.UIStroke
+G2L["53"] = Instance.new("UIStroke", G2L["50"]);
+G2L["53"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["53"]["Color"] = Color3.fromRGB(37, 37, 37);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.audrm.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["50"]);
+
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.Frame
+G2L["55"] = Instance.new("Frame", G2L["46"]);
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(51, 51, 51);
+G2L["55"]["Size"] = UDim2.new(0, 177, 0, 187);
+G2L["55"]["Position"] = UDim2.new(0.46956, 0, 0.39059, 0);
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.Frame.UIStroke
+G2L["56"] = Instance.new("UIStroke", G2L["55"]);
+G2L["56"]["Color"] = Color3.fromRGB(68, 68, 68);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.Frame.ScrollingFrame
+G2L["57"] = Instance.new("ScrollingFrame", G2L["55"]);
+G2L["57"]["Active"] = true;
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["CanvasSize"] = UDim2.new(0, 0, 999999, 0);
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["57"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["ScrollBarThickness"] = 0;
+G2L["57"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.Frame.ScrollingFrame.UIListLayout
+G2L["58"] = Instance.new("UIListLayout", G2L["57"]);
+G2L["58"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.Frame.ScrollingFrame.TextButton
+G2L["59"] = Instance.new("TextButton", G2L["57"]);
+G2L["59"]["TextWrapped"] = true;
+G2L["59"]["BorderSizePixel"] = 0;
+G2L["59"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["TextSize"] = 14;
+G2L["59"]["TextScaled"] = true;
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["59"]["Size"] = UDim2.new(0, 178, 0, 32);
+G2L["59"]["BackgroundTransparency"] = 1;
+G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["59"]["Text"] = [[code test]];
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.Frame.UIStroke
+G2L["5a"] = Instance.new("UIStroke", G2L["55"]);
+G2L["5a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["5a"]["Color"] = Color3.fromRGB(68, 68, 68);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.bbb
+G2L["5b"] = Instance.new("ImageLabel", G2L["46"]);
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5b"]["Image"] = [[rbxassetid://79782069696233]];
+G2L["5b"]["Size"] = UDim2.new(0, 199, 0, 200);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["BackgroundTransparency"] = 1;
+G2L["5b"]["Name"] = [[bbb]];
+G2L["5b"]["Position"] = UDim2.new(-0.05507, 0, 0.35765, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.foundcodes.bbb.LocalScript
+G2L["5c"] = Instance.new("LocalScript", G2L["5b"]);
+
+
+
+-- StarterGui.Honey.welcom
+G2L["5d"] = Instance.new("Frame", G2L["1"]);
+G2L["5d"]["ZIndex"] = 14;
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["5d"]["Size"] = UDim2.new(0, 370, 0, 20);
+G2L["5d"]["Position"] = UDim2.new(0.36075, 0, 0.33438, 0);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Name"] = [[welcom]];
+
+
+-- StarterGui.Honey.welcom.Drag
+G2L["5e"] = Instance.new("LocalScript", G2L["5d"]);
+G2L["5e"]["Name"] = [[Drag]];
+
+
+-- StarterGui.Honey.welcom.Frame
+G2L["5f"] = Instance.new("Frame", G2L["5d"]);
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 38);
+G2L["5f"]["Size"] = UDim2.new(0, 370, 0, 276);
+G2L["5f"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Honey.welcom.Frame.TextLabel
+G2L["60"] = Instance.new("TextLabel", G2L["5f"]);
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["TextSize"] = 30;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["BackgroundTransparency"] = 1;
+G2L["60"]["Size"] = UDim2.new(0, 84, 0, 19);
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["Text"] = [[Welcome to Dex Honey Remake!]];
+G2L["60"]["Position"] = UDim2.new(0.38649, 0, 0.02979, 0);
+
+
+-- StarterGui.Honey.welcom.Frame.TextLabel
+G2L["61"] = Instance.new("TextLabel", G2L["5f"]);
+G2L["61"]["TextWrapped"] = true;
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TextSize"] = 19;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["61"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["BackgroundTransparency"] = 1;
+G2L["61"]["Size"] = UDim2.new(0, 368, 0, 223);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Text"] = [[Marking its first anniversary, Dex Honey™ arrives as a sophisticated fan-led remake, engineered through the collaboration of Imperial Scientists and PayPal Inc. This iteration integrates the robust Dex Honey AI Engine™ to grant users unprecedented environmental oversight. Featuring the critical Find In-Game Code function, this tool allows for surgical precision and operational supremacy so absolute it may trigger an official incident report within Roblox Confluence. It is the definitive zenith of community-driven innovation.
+Learn more at: https://discord.gg/zMUwesNrry]];
+G2L["61"]["Position"] = UDim2.new(-0, 0, 0.13238, 0);
+
+
+-- StarterGui.Honey.welcom.Close
+G2L["62"] = Instance.new("TextButton", G2L["5d"]);
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["AutoButtonColor"] = false;
+G2L["62"]["TextSize"] = 14;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(33, 33, 33);
+G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["62"]["Size"] = UDim2.new(0, 16, 0, 16);
+G2L["62"]["BackgroundTransparency"] = 1;
+G2L["62"]["Name"] = [[Close]];
+G2L["62"]["Text"] = [[]];
+G2L["62"]["Position"] = UDim2.new(1, -18, 0, 2);
+
+
+-- StarterGui.Honey.welcom.Close.LocalScript
+G2L["63"] = Instance.new("LocalScript", G2L["62"]);
+
+
+
+-- StarterGui.Honey.welcom.Close.ImageLabel
+G2L["64"] = Instance.new("ImageLabel", G2L["62"]);
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["Image"] = [[rbxassetid://5054663650]];
+G2L["64"]["Size"] = UDim2.new(0, 10, 0, 10);
+G2L["64"]["BackgroundTransparency"] = 1;
+G2L["64"]["Position"] = UDim2.new(0, 3, 0, 3);
+
+
+-- StarterGui.Honey.welcom.Close.UICorner
+G2L["65"] = Instance.new("UICorner", G2L["62"]);
+G2L["65"]["CornerRadius"] = UDim.new(0, 4);
+
+
+-- StarterGui.Honey.welcom.ImageLabel
+G2L["66"] = Instance.new("ImageLabel", G2L["5d"]);
+G2L["66"]["BorderSizePixel"] = 0;
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["Image"] = [[rbxassetid://104922237908516]];
+G2L["66"]["Size"] = UDim2.new(0, 40, 0, 35);
+G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["66"]["BackgroundTransparency"] = 1;
+G2L["66"]["Position"] = UDim2.new(0, 0, 0, -8);
+
+
+-- StarterGui.Honey.welcom.TextLabel
+G2L["67"] = Instance.new("TextLabel", G2L["5d"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["TextSize"] = 14;
+G2L["67"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["67"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["67"]["BackgroundTransparency"] = 1;
+G2L["67"]["Size"] = UDim2.new(0, 84, 0, 19);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Text"] = [[Welcome]];
+G2L["67"]["Position"] = UDim2.new(0.10619, 0, 0, 0);
+
+
+-- StarterGui.Honey.honeyyfehax.Drag
+local function C_3()
+local script = G2L["3"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_3);
+-- StarterGui.Honey.honeyyfehax.Frame.LocalScript
+local function C_5()
+local script = G2L["5"];
+	script.Parent.Parent.found.Visible = false
+end;
+task.spawn(C_5);
+-- StarterGui.Honey.honeyyfehax.Frame.gamesss.ingamecodepls.LocalScript
+local function C_8()
+local script = G2L["8"];
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Parent.Parent.findingcode.Visible = true
+	end)
+end;
+task.spawn(C_8);
+-- StarterGui.Honey.honeyyfehax.Frame.btcdss.ctcodses.LocalScript
+local function C_d()
+local script = G2L["d"];
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.Parent.Parent.finding.Visible = true
+	end)
+end;
+task.spawn(C_d);
+-- StarterGui.Honey.honeyyfehax.Frame.Frame.bbb.LocalScript
+local function C_15()
+local script = G2L["15"];
+	local imageLabel = script.Parent
+	
+	local fps = 24
+	local frameTime = 1 / fps
+	
+	local frames = {
+		74480148927928,
+		125415549119229,
+		138660948934344,
+		135762521518597,
+		76095504374385,
+		98608510838121,
+		94864362186515,
+		120018095236043,
+		70594977180757,
+	
+		137137448410756,
+	
+		70594977180757,
+		120018095236043,
+		94864362186515,
+		98608510838121,
+		76095504374385,
+		135762521518597,
+		138660948934344,
+		125415549119229
+	}
+	
+	while true do
+		for i = 1, #frames do
+			imageLabel.Image = "rbxassetid://" .. frames[i]
+			task.wait(frameTime)
+		end
+	end
+end;
+task.spawn(C_15);
+-- StarterGui.Honey.honeyyfehax.Minimize.LocalScript
+local function C_17()
+local script = G2L["17"];
+	-- THIS ONE ALSO AI
+	
+	local TweenService = game:GetService("TweenService")
+	
+	local button = script.Parent
+	local container = button.Parent
+	local lastOpenedFrame = nil 
+	local isProcessing = false -- Prevents scripts from fighting each other
+	
+	-- Configuration
+	local OPEN_SIZE = UDim2.new(0, 345, 0, 425)
+	local CLOSED_SIZE = UDim2.new(0, 345, 0, 0)
+	local OPEN_ID = "rbxassetid://5034768003"
+	local CLOSED_ID = "rbxassetid://5060023708"
+	
+	local function updateFrames(isOpening)
+		isProcessing = true -- LOCK the logic
+		for _, child in pairs(container:GetChildren()) do
+			if child:IsA("Frame") then
+				if isOpening and child == lastOpenedFrame then
+					child.Visible = true
+					child:TweenSize(OPEN_SIZE, "Out", "Quart", 0.25, true)
+				else
+					child:TweenSize(CLOSED_SIZE, "Out", "Quart", 0.25, true)
+					task.delay(0.25, function()
+						-- Only hide if we aren't currently trying to show this specific frame
+						if not isOpening or child ~= lastOpenedFrame then
+							child.Visible = false
+						end
+					end)
+				end
+			end
+		end
+		task.wait(0.3)
+		isProcessing = false -- UNLOCK
+	end
+	
+	-- Toggle Button Logic
+	button.MouseButton1Click:Connect(function()
+		local isOpening = (button.ImageLabel.Image == CLOSED_ID)
+	
+		if isOpening and lastOpenedFrame == nil then
+			for _, child in pairs(container:GetChildren()) do
+				if child:IsA("Frame") then lastOpenedFrame = child break end
+			end
+		end
+	
+		button.ImageLabel.Image = isOpening and OPEN_ID or CLOSED_ID
+		updateFrames(isOpening)
+	end)
+	
+	-- THE FIX: Handle external "Visible = true" changes
+	for _, child in pairs(container:GetChildren()) do
+		if child:IsA("Frame") then
+			child:GetPropertyChangedSignal("Visible"):Connect(function()
+				-- If the frame became visible and the toggle script ISN'T the one who did it
+				if child.Visible == true and not isProcessing then
+					lastOpenedFrame = child
+	
+					-- Ensure the size is correct so it doesn't stay at (0,0)
+					child.Size = OPEN_SIZE 
+	
+					-- Force all other frames to hide so they don't overlap
+					for _, other in pairs(container:GetChildren()) do
+						if other:IsA("Frame") and other ~= child then
+							other.Visible = false
+							other.Size = CLOSED_SIZE
+						end
+					end
+				end
+			end)
+		end
+	end
+end;
+task.spawn(C_17);
+-- StarterGui.Honey.honeyyfehax.Close.LocalScript
+local function C_1b()
+local script = G2L["1b"];
+	-- AI USED!
+	
+	local TweenService = game:GetService("TweenService")
+	
+	local button = script.Parent
+	local aiFrame = script.Parent.Parent -- The main container
+	local main = aiFrame.Frame
+	local toggleButton = aiFrame.Parent:FindFirstChild("Button") -- Adjust this name to your minimize button's name
+	
+	-- Configuration
+	local CLOSED_SIZE = UDim2.new(0, 345, 0, 0)
+	local RESET_SIZE = UDim2.new(0, 345, 0, 425)
+	local CLOSED_ID = "rbxassetid://5060023708"
+	
+	button.MouseButton1Click:Connect(function()
+		-- 1. Animate the closure
+		main:TweenSize(
+			CLOSED_SIZE,
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quart,
+			0.25,
+			true
+		)
+	
+		-- 2. Wait for tween to finish
+		task.wait(0.25)
+	
+		-- 3. Hide everything
+		main.Visible = false
+		aiFrame.Visible = false
+	
+		-- 4. RESET logic for the NEXT time it opens
+		main.Size = RESET_SIZE
+	
+		-- Ensure children are visible for when it reopens
+		for _, cp in ipairs(main:GetChildren()) do
+			if cp:IsA("GuiObject") then
+				cp.Visible = true
+			end
+		end
+	
+		-- 5. IMPORTANT: Sync the main toggle button icon
+		-- This prevents you from having to click the toggle button twice to reopen
+		if toggleButton and toggleButton:FindFirstChild("ImageLabel") then
+			toggleButton.ImageLabel.Image = CLOSED_ID
+		end
+	end)
+end;
+task.spawn(C_1b);
+-- StarterGui.Honey.honeyyfehax.finding.LocalScript
+local function C_20()
+local script = G2L["20"];
+	
+end;
+task.spawn(C_20);
+-- StarterGui.Honey.honeyyfehax.finding.Frame.bbb.LocalScript
+local function C_26()
+local script = G2L["26"];
+	local imageLabel = script.Parent
+	
+	local fps = 24
+	local frameTime = 1 / fps
+	
+	local frames = {
+		134712952854811,
+		97720878773617,
+		105623310109862,
+		121220660654866,
+		96420195790121,
+		108719292975941,
+		86786170668431,
+		73478205253970,
+		106747157841414,
+		138536191110407,
+		106764279081748,
+		129975759063115,
+		131161069582113,
+		129975759063115,
+		106764279081748,
+		138536191110407,
+		106747157841414,
+		73478205253970,
+		86786170668431,
+		108719292975941,
+		96420195790121,
+		121220660654866,
+		105623310109862,
+		97720878773617,
+		134712952854811,
+	}
+	
+	while true do
+		for i = 1, #frames do
+			imageLabel.Image = "rbxassetid://" .. frames[i]
+			task.wait(frameTime)
+		end
+	end
+end;
+task.spawn(C_26);
+-- StarterGui.Honey.honeyyfehax.finding.TextLabel.LocalScript
+local function C_28()
+local script = G2L["28"];
+	local UPD = script.Parent
+	local parentFinding = script.Parent.Parent.Parent.finding
+	local parentFound = script.Parent.Parent.Parent.found
+	
+	-- only want the sequence to run WHEN the finding frame becomes visible, and btw if u minimize while scanning itll rescan
+	parentFinding:GetPropertyChangedSignal("Visible"):Connect(function()
+		if parentFinding.Visible then
+			UPD.Text = "Initializing AI Engine"
+			task.wait(1.2)
+			UPD.Text = "Collecting Server Scripts"
+			task.wait(0.4)
+			UPD.Text = "Fuzzing..."
+			task.wait(3.5)
+			UPD.Text = "Sending results to AI Engine"
+			task.wait(1)
+			UPD.Text = "Processing..."
+			task.wait(3)
+			UPD.Text = "Reconstructing Bytecode"
+			task.wait(3)
+			UPD.Text = "Complete!"
+			task.wait(1)
+	
+			-- visible when the scan done
+			parentFound.Visible = true
+			parentFinding.Visible = false
+		end
+	end)
+end;
+task.spawn(C_28);
+-- StarterGui.Honey.honeyyfehax.found.LocalScript
+local function C_2a()
+local script = G2L["2a"];
+	local foundFrame = script.Parent
+	local scrollingFrame = foundFrame:WaitForChild("Frame"):WaitForChild("ScrollingFrame")
+	local statusLabel = foundFrame:WaitForChild("TextLabel")
+	local layout = scrollingFrame:FindFirstChildOfClass("UIListLayout")
+	
+	
+	if scrollingFrame:FindFirstChild("TextButton") then
+		scrollingFrame.TextButton:Destroy()
+	end
+	
+	local function updateCount()
+		local count = 0
+		for _, child in ipairs(scrollingFrame:GetChildren()) do
+			if child:IsA("TextButton") then
+				count = count + 1
+			end
+		end
+		statusLabel.Text = "".. tostring(count) .. " Scripts Reconstructed!"
+	end
+	
+	local function createButton(obj)
+		if not (obj:IsA("Script") or obj:IsA("LocalScript") or obj:IsA("ModuleScript")) then
+			return 
+		end
+	
+		local btnName = obj:GetFullName() .. "_Btn"
+		if scrollingFrame:FindFirstChild(btnName) then return end
+	
+		local newButton = Instance.new("TextButton")
+		newButton.Name = btnName
+		newButton.Parent = scrollingFrame
+		newButton.Text = obj:GetFullName()
+		newButton.Size = UDim2.new(1, -10, 0, 32)
+		newButton.BackgroundTransparency = 1
+		newButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		newButton.TextSize = 12
+		newButton.TextScaled = true
+		newButton.TextWrapped = true
+		newButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+	
+		newButton.MouseButton1Click:Connect(function()
+			if setclipboard then
+				setclipboard(obj:GetFullName())
+				local oldText = newButton.Text
+				newButton.Text = "Path Copied!"
+				task.wait(0.5)
+				newButton.Text = oldText
+			end
+		end)
+	
+		updateCount()
+	end
+	
+	local function refreshList()
+		local services = {
+			game:GetService("ServerScriptService"),
+			game:GetService("ServerStorage")
+		}
+	
+		for _, service in ipairs(services) do
+			for _, item in ipairs(service:GetDescendants()) do
+				createButton(item)
+			end
+		end
+	
+		if layout then
+			scrollingFrame.CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y)
+		end
+	
+		updateCount()
+	end
+	
+	game:GetService("ServerScriptService").DescendantAdded:Connect(function(item)
+		createButton(item)
+	end)
+	
+	game:GetService("ServerStorage").DescendantAdded:Connect(function(item)
+		createButton(item)
+	end)
+	
+	game:GetService("ServerScriptService").DescendantRemoving:Connect(function()
+		task.wait(0.1)
+		updateCount()
+	end)
+	
+	
+	refreshList()
+	
+	-- Loop
+	task.spawn(function()
+		while task.wait(3) do
+			refreshList()
+		end
+	end)
+end;
+task.spawn(C_2a);
+-- StarterGui.Honey.honeyyfehax.found.btcdss.ctcodses.LocalScript
+local function C_31()
+local script = G2L["31"];
+	script.Parent.MouseButton1Down:Connect(function()
+		wait(0.15)
+		script.Parent.Parent.Parent.Parent.finding.Visible = false
+		script.Parent.Parent.Parent.Parent.found.Visible = false
+		script.Parent.Parent.Parent.Parent.Frame.Visible = true
+	end)
+end;
+task.spawn(C_31);
+-- StarterGui.Honey.honeyyfehax.found.bbb.LocalScript
+local function C_3b()
+local script = G2L["3b"];
+	-- i though its bugged so i use ai to fix this lol, i fiugured out the real bug later
+	
+	local MarketplaceService = game:GetService("MarketplaceService")
+	local ImageLabel = script.Parent
+	
+	local MainTable = {
+		"rbxassetid://79782069696233",
+		"rbxassetid://94058381569608",
+		"rbxassetid://84697579011476",
+		"rbxassetid://120701093129253",
+		"rbxassetid://119137680185404",
+		"rbxassetid://100662674527163",
+		"rbxassetid://109729473233895",
+		"rbxassetid://132647447231063",
+		"rbxassetid://93852097422598",
+		"rbxassetid://119233369835751",
+		"rbxassetid://103789182701094",
+		"rbxassetid://118844166458708",
+		"rbxassetid://124191529766206",
+		"rbxassetid://90909138916051",
+		"rbxassetid://75463259310586",
+		"rbxassetid://126590001672096",
+		"rbxassetid://94025438442218",
+		"rbxassetid://103004758842358",
+		"rbxassetid://109656987596984",
+		"rbxassetid://135964779872589",
+		"rbxassetid://120364742879848",
+		"rbxassetid://85892974802605",
+		"rbxassetid://110643815077737",
+		"rbxassetid://103033503682996",
+		"rbxassetid://116420781945585",
+		"rbxassetid://102287448705743",
+		"rbxassetid://113033116605145",
+		"rbxassetid://119839281146928",
+		"rbxassetid://107931866737175",
+		"rbxassetid://122998949452183"
+	}
+	
+	local function getFrameNumber(assetId)
+		local id = tonumber(assetId:match("%d+"))
+		local success, info = pcall(MarketplaceService.GetProductInfo, MarketplaceService, id)
+		if success and info and info.Name then
+			return tonumber(info.Name:match("frame_(%d+)_delay"))
+		end
+	end
+	
+	local temp = {}
+	for _, asset in ipairs(MainTable) do
+		local frame = getFrameNumber(asset)
+		if frame then
+			table.insert(temp, {frame = frame, id = asset})
+		end
+	end
+	
+	table.sort(temp, function(a, b)
+		return a.frame < b.frame
+	end)
+	
+	local frames = {}
+	for _, v in ipairs(temp) do
+		table.insert(frames, v.id)
+	end
+	
+	local speed = 0.02
+	local playing = false
+	
+	local function play()
+		if playing then return end
+		playing = true
+	
+		while playing do
+			for i = 1, #frames do
+				if not playing then break end
+				ImageLabel.Image = frames[i]
+				task.wait(speed)
+			end
+		end
+	end
+	
+	ImageLabel:GetPropertyChangedSignal("Visible"):Connect(function()
+		if ImageLabel.Visible then
+			play()
+		else
+			playing = false
+		end
+	end)
+	
+	if ImageLabel.Visible then
+		play()
+	end
+end;
+task.spawn(C_3b);
+-- StarterGui.Honey.honeyyfehax.findingcode.LocalScript
+local function C_3d()
+local script = G2L["3d"];
+	
+end;
+task.spawn(C_3d);
+-- StarterGui.Honey.honeyyfehax.findingcode.Frame.bbb.LocalScript
+local function C_43()
+local script = G2L["43"];
+	local imageLabel = script.Parent
+	
+	local fps = 24
+	local frameTime = 1 / fps
+	
+	local frames = {
+		134712952854811,
+		97720878773617,
+		105623310109862,
+		121220660654866,
+		96420195790121,
+		108719292975941,
+		86786170668431,
+		73478205253970,
+		106747157841414,
+		138536191110407,
+		106764279081748,
+		129975759063115,
+		131161069582113,
+		129975759063115,
+		106764279081748,
+		138536191110407,
+		106747157841414,
+		73478205253970,
+		86786170668431,
+		108719292975941,
+		96420195790121,
+		121220660654866,
+		105623310109862,
+		97720878773617,
+		134712952854811,
+	}
+	
+	while true do
+		for i = 1, #frames do
+			imageLabel.Image = "rbxassetid://" .. frames[i]
+			task.wait(frameTime)
+		end
+	end
+end;
+task.spawn(C_43);
+-- StarterGui.Honey.honeyyfehax.findingcode.TextLabel.LocalScript
+local function C_45()
+local script = G2L["45"];
+	local UPD = script.Parent
+	local parentFinding = script.Parent.Parent.Parent.findingcode
+	local parentFound = script.Parent.Parent.Parent.foundcodes
+	
+	-- same sh u know i copy and paste
+	parentFinding:GetPropertyChangedSignal("Visible"):Connect(function()
+		if parentFinding.Visible then
+			UPD.Text = "Initializing AI Engine"
+			task.wait(1.2)
+			UPD.Text = "Sending DataModel and otther information to AI Engine"
+			task.wait(1.5)
+			UPD.Text = "Processing..."
+			task.wait(3)
+			UPD.Text = "Sending results to AI Engine"
+			task.wait(1)
+			UPD.Text = "Found possible code file:\ngame.ServerScriptService.manager_codes"
+			task.wait(1)
+			UPD.Text = "Inserting External Asset on Server: " .. tostring(math.random(100000,999999)) .. " "
+			task.wait(6)
+			UPD.Text = "Syncing data to AI Engine"
+			task.wait(0.8)
+			UPD.Text = "Processing..."
+			task.wait(1)
+			UPD.Text = "Complete!"
+			task.wait(1)
+	
+			-- DONEEE
+			parentFound.Visible = true
+			parentFinding.Visible = false
+		end
+	end)
+end;
+task.spawn(C_45);
+-- StarterGui.Honey.honeyyfehax.foundcodes.LocalScript
+local function C_47()
+local script = G2L["47"];
+	-- by ai
+	
+	local MarketplaceService = game:GetService("MarketplaceService")
+	
+	local frame = script.Parent
+	local scrollingFrame = frame:WaitForChild("Frame"):WaitForChild("ScrollingFrame")
+	local statusLabel = frame:WaitForChild("TextLabel")
+	
+	local template = scrollingFrame:FindFirstChild("TextButton")
+	if template then template.Visible = false end
+	
+	local function copyCode(code)
+		if setclipboard then
+			setclipboard(code)
+		elseif toclipboard then
+			toclipboard(code)
+		end
+	end
+	
+	local function createCodeButton(codeName)
+		local newButton = template:Clone()
+		newButton.Name = codeName
+		newButton.Text = codeName
+		newButton.Visible = true
+		newButton.Parent = scrollingFrame
+	
+		newButton.MouseButton1Click:Connect(function()
+			copyCode(codeName)
+			local oldText = newButton.Text
+			newButton.Text = "COPIED!"
+			task.wait(1)
+			newButton.Text = oldText
+		end)
+	end
+	
+	local function runAutoFetch()
+		local ok, productInfo = pcall(function()
+			return MarketplaceService:GetProductInfo(game.PlaceId)
+		end)
+	
+		if not ok or not productInfo then return end
+	
+		local input = productInfo.Name:gsub("%b[]", ""):gsub("[!@#$%%^&*()_+=~`]", "")
+		local words = {}
+		for word in input:gmatch("%w+") do table.insert(words, word) end
+		local formatted = string.lower(table.concat(words, "-"))
+		local url = "https://rocodes.gg/codes/" .. formatted
+	
+		local success, html = pcall(function()
+			return game:HttpGet(url)
+		end)
+	
+		if not success or not html then return end
+	
+		for _, child in pairs(scrollingFrame:GetChildren()) do
+			if child:IsA("TextButton") and child ~= template then
+				child:Destroy()
+			end
+		end
+	
+		local count = 0
+		for code in html:gmatch('"name"%s*:%s*"(.-)"') do
+			if #code < 50 then
+				count = count + 1
+	
+				statusLabel.Text = "" .. count .. " Codes Found!"
+	
+				createCodeButton(code)
+				task.wait(0.05) 
+			end
+		end
+	end
+	
+	task.spawn(runAutoFetch)
+end;
+task.spawn(C_47);
+-- StarterGui.Honey.honeyyfehax.foundcodes.btcdss.ctcodses.LocalScript
+local function C_4d()
+local script = G2L["4d"];
+	script.Parent.MouseButton1Down:Connect(function()
+		wait(0.15)
+		script.Parent.Parent.Parent.Parent.finding.Visible = false
+		script.Parent.Parent.Parent.Parent.found.Visible = false
+		script.Parent.Parent.Parent.Parent.foundcodes.Visible = false
+		script.Parent.Parent.Parent.Parent.findingcode.Visible = false
+		script.Parent.Parent.Parent.Parent.Frame.Visible = true
+	end)
+end;
+task.spawn(C_4d);
+-- StarterGui.Honey.honeyyfehax.foundcodes.audrm.auuudddd.LocalScript
+local function C_52()
+local script = G2L["52"];
+	-- USED AI!
+	
+	local button = script.Parent
+	local scrollingFrame = script.Parent.Parent.Parent:WaitForChild("Frame"):WaitForChild("ScrollingFrame")
+	local guiRoot = script.Parent.Parent.Parent.Parent -- This is honeyyfehax
+	
+	-- Case-insensitive keywords
+	local keywords = {"code", "promo", "redeem", "coupon", "enter", "reward"}
+	
+	-- Function to check Name, Text, and Placeholder (Case-Insensitive)
+	local function matchesKeyword(obj)
+		local name = string.lower(obj.Name)
+		local text = ""
+		local placeholder = ""
+	
+		if obj:IsA("TextBox") then
+			text = string.lower(obj.Text)
+			placeholder = string.lower(obj.PlaceholderText or "")
+		elseif obj:IsA("TextButton") or obj:IsA("TextLabel") then
+			text = string.lower(obj.Text)
+		end
+	
+		for _, k in pairs(keywords) do
+			if string.find(name, k) or string.find(text, k) or string.find(placeholder, k) then
+				return true
+			end
+		end
+		return false
+	end
+	
+	-- Deep Scan function to find game's UI
+	local function findGameRedeemUI()
+		local targetInput = nil
+		local targetButton = nil
+	
+		-- GetDescendants searches every folder and frame in the game
+		for _, v in ipairs(game:GetService("Players").LocalPlayer.PlayerGui:GetDescendants()) do
+			-- Safety: Don't find our own Dex Honey GUI
+			if not v:IsDescendantOf(guiRoot) then
+	
+				-- Find the TextBox
+				if v:IsA("TextBox") and matchesKeyword(v) then
+					targetInput = v
+				end
+	
+				-- Find the Click Button
+				if (v:IsA("TextButton") or v:IsA("ImageButton")) and matchesKeyword(v) then
+					targetButton = v
+				end
+			end
+		end
+		return targetInput, targetButton
+	end
+	
+	-- Main Click Event
+	button.MouseButton1Click:Connect(function()
+		local inputField, redeemBtn = findGameRedeemUI()
+	
+		if not inputField then
+			warn("Auto-Redeem: Could not find a code TextBox in this game.")
+			return
+		end
+	
+		-- Loop through the codes we found earlier in the scrolling frame
+		for _, child in ipairs(scrollingFrame:GetChildren()) do
+			-- Only grab buttons that are actually codes (skip the template)
+			if child:IsA("TextButton") and child.Visible == true and child.Name ~= "TextButton" then
+				local codeToTry = child.Text
+	
+				-- 1. Paste the code into the game's box
+				inputField.Text = codeToTry
+				task.wait(0.2)
+	
+				-- 2. Trigger the redeem
+				if redeemBtn then
+					-- Fire the button (works for most games)
+					local pos = redeemBtn.AbsolutePosition
+					local vim = game:GetService("VirtualInputManager")
+					vim:SendMouseButtonEvent(pos.X + (redeemBtn.AbsoluteSize.X/2), pos.Y + (redeemBtn.AbsoluteSize.Y/2), 0, true, game, 1)
+					vim:SendMouseButtonEvent(pos.X + (redeemBtn.AbsoluteSize.X/2), pos.Y + (redeemBtn.AbsoluteSize.Y/2), 0, false, game, 1)
+				else
+					-- Fallback: try hitting "Enter"
+					inputField:ReleaseFocus(true) 
+				end
+	
+				-- 3. Cooldown: Wait 2 seconds before the next code to prevent anti-spam
+				task.wait(2) 
+			end
+		end
+	end)
+end;
+task.spawn(C_52);
+-- StarterGui.Honey.honeyyfehax.foundcodes.bbb.LocalScript
+local function C_5c()
+local script = G2L["5c"];
+	local MarketplaceService = game:GetService("MarketplaceService")
+	local ImageLabel = script.Parent
+	
+	local MainTable = {
+		"rbxassetid://79782069696233",
+		"rbxassetid://94058381569608",
+		"rbxassetid://84697579011476",
+		"rbxassetid://120701093129253",
+		"rbxassetid://119137680185404",
+		"rbxassetid://100662674527163",
+		"rbxassetid://109729473233895",
+		"rbxassetid://132647447231063",
+		"rbxassetid://93852097422598",
+		"rbxassetid://119233369835751",
+		"rbxassetid://103789182701094",
+		"rbxassetid://118844166458708",
+		"rbxassetid://124191529766206",
+		"rbxassetid://90909138916051",
+		"rbxassetid://75463259310586",
+		"rbxassetid://126590001672096",
+		"rbxassetid://94025438442218",
+		"rbxassetid://103004758842358",
+		"rbxassetid://109656987596984",
+		"rbxassetid://135964779872589",
+		"rbxassetid://120364742879848",
+		"rbxassetid://85892974802605",
+		"rbxassetid://110643815077737",
+		"rbxassetid://103033503682996",
+		"rbxassetid://116420781945585",
+		"rbxassetid://102287448705743",
+		"rbxassetid://113033116605145",
+		"rbxassetid://119839281146928",
+		"rbxassetid://107931866737175",
+		"rbxassetid://122998949452183"
+	}
+	
+	local function getFrameNumber(assetId)
+		local id = tonumber(assetId:match("%d+"))
+		local success, info = pcall(MarketplaceService.GetProductInfo, MarketplaceService, id)
+		if success and info and info.Name then
+			return tonumber(info.Name:match("frame_(%d+)_delay"))
+		end
+	end
+	
+	local temp = {}
+	for _, asset in ipairs(MainTable) do
+		local frame = getFrameNumber(asset)
+		if frame then
+			table.insert(temp, {frame = frame, id = asset})
+		end
+	end
+	
+	table.sort(temp, function(a, b)
+		return a.frame < b.frame
+	end)
+	
+	local frames = {}
+	for _, v in ipairs(temp) do
+		table.insert(frames, v.id)
+	end
+	
+	local speed = 0.02
+	local playing = false
+	
+	local function play()
+		if playing then return end
+		playing = true
+	
+		while playing do
+			for i = 1, #frames do
+				if not playing then break end
+				ImageLabel.Image = frames[i]
+				task.wait(speed)
+			end
+		end
+	end
+	
+	ImageLabel:GetPropertyChangedSignal("Visible"):Connect(function()
+		if ImageLabel.Visible then
+			play()
+		else
+			playing = false
+		end
+	end)
+	
+	if ImageLabel.Visible then
+		play()
+	end
+end;
+task.spawn(C_5c);
+-- StarterGui.Honey.welcom.Drag
+local function C_5e()
+local script = G2L["5e"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_5e);
+-- StarterGui.Honey.welcom.Close.LocalScript
+local function C_63()
+local script = G2L["63"];
+	local TweenService = game:GetService("TweenService")
+	
+	local button = script.Parent
+	local aiFrame = script.Parent.Parent -- aiiiii
+	local main = aiFrame.Frame
+	
+	button.MouseButton1Click:Connect(function()
+	
+		-- tween close
+		main:TweenSize(
+			UDim2.new(0, 370, 0, 0),
+			Enum.EasingDirection.Out,
+			Enum.EasingStyle.Quart,
+			0.25,
+			true
+		)
+	
+		-- hide children (same as your minimize logic)
+		for _, cp in ipairs(main:GetChildren()) do
+			if cp:IsA("GuiObject") then
+				cp.Visible = false
+			end
+		end
+	
+		wait(0.25)
+	
+		-- hide main + whole AI frame
+		main.Visible = false
+		aiFrame.Visible = false
+	
+		-- reset for next open (THIS is why it works now)
+		main.Size = UDim2.new(0, 370, 0, 235)
+	
+		for _, cp in ipairs(main:GetChildren()) do
+			if cp:IsA("GuiObject") then
+				cp.Visible = true
+			end
+		end
+	
+	end)
+end;
+task.spawn(C_63);
+
+return G2L["1"], require;
