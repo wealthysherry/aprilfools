@@ -1993,4 +1993,492 @@ task.spawn(C_63);
 return G2L["1"], require;
 
 -- sss scanner
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wealthysherry/aprilfools/refs/heads/main/ServerScriptService%20scanner%20by%20Alurion"))()
+-- This Was ORIGNNALLY Authored By: Alurion
+-- Edited by omy.y on dc
+-- AI used for renaming variables, combining scripts & better comments
+-- I copied original method
+
+-- RECONSTRUCTION
+
+task.spawn(function()
+
+    
+    local header = "--[[Decompiled with YSS Engine]]"
+    
+    local allowed_roots = {
+        server_storage = true,
+        server_script_service = true,
+    }
+    
+    local debug_mode = _G.Debug == true
+    
+    local function dbg_log(...)
+        if debug_mode then
+            print("[YSS DEBUG]:", ...)
+        end
+    end
+    
+
+    local function is_folder(name)
+        return name:sub(-1):lower() == "s"
+    end
+    
+    local function detect_script_type(source)
+        if source:find("return%s+") then
+            return "ModuleScript"
+        end
+        return "Script"
+    end
+    
+    -- extract yes no ok ty
+    local function extract_function(source, func_name)
+        -- normal function or anorrmal
+        local pattern = "function%s+" .. func_name .. "%s*%b()%s*(.-)\nend"
+        local body = string.match(source, pattern)
+    
+        if body then
+            return "function " .. func_name .. "()\n" .. body .. "\nend"
+        end
+    
+        -- formula1 maybe 2 yes format shit
+        local pattern2 = func_name .. "%s*=%s*function%s*%b()%s*(.-)\nend"
+        local body2 = string.match(source, pattern2)
+    
+        if body2 then
+            return "function " .. func_name .. "()\n" .. body2 .. "\nend"
+        end
+    
+        return nil
+    end
+    
+    local function get_instance_type(name, index, total_parts, source_code)
+        local is_last = (index == total_parts)
+    
+        if is_folder(name) then
+            return "Folder"
+        end
+    
+        if is_last then
+            return detect_script_type(source_code)
+        end
+    
+        return "Folder"
+    end
+    
+    -- gui idk what does this do but cool i guess, alurion made this so
+    local function create_gui()
+        local screen_gui = Instance.new("ScreenGui")
+        screen_gui.Name = "YSS_Debug_Reconstruct"
+        screen_gui.ResetOnSpawn = false
+        screen_gui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+    
+        local frame = Instance.new("Frame")
+        frame.Size = UDim2.new(0, 600, 0, 400)
+        frame.Visible = false
+        frame.Position = UDim2.new(0.5, -300, 0.5, -200)
+        frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+        frame.Parent = screen_gui
+    
+        local scrolling = Instance.new("ScrollingFrame")
+        scrolling.Size = UDim2.new(1, -10, 1, -10)
+        scrolling.Position = UDim2.new(0, 5, 0, 5)
+        scrolling.CanvasSize = UDim2.new(0, 0, 0, 0)
+        scrolling.Parent = frame
+    
+        return scrolling
+    end
+    
+    local log_container = create_gui()
+    
+    local function gui_log(text)
+        print("[YSS SCANNER 1]: " .. text)
+    
+        local label = Instance.new("TextLabel")
+        label.Size = UDim2.new(1, -10, 0, 20)
+        label.BackgroundTransparency = 1
+        label.TextColor3 = Color3.new(1, 1, 1)
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Text = text
+        label.Parent = log_container
+    
+        label.Position = UDim2.new(0, 0, 0, #log_container:GetChildren() * 20)
+        log_container.CanvasSize = UDim2.new(0, 0, 0, #log_container:GetChildren() * 20)
+    end
+    
+    -- CORE REBUILDDDDDDDD
+    local function recreate_path(path_string, source_name, source_code, raw_path)
+        local parts = string.split(path_string, ".")
+        if #parts < 2 then return false end
+    
+        local root_name = parts[1]
+        if not allowed_roots[root_name] then return false end
+    
+        local root = game:FindFirstChild(root_name == "server_storage" and "ServerStorage" or "ServerScriptService")
+        if not root then return false end
+    
+        local current = root
+        local created = {}
+    
+        for i = 2, #parts do
+            local name = parts[i]
+            local instance_type = get_instance_type(name, i, #parts, source_code)
+    
+            local existing = current:FindFirstChild(name)
+    
+            if not existing then
+                local new_inst = Instance.new(instance_type)
+                new_inst.Name = name
+    
+                if instance_type == "ModuleScript" then
+                    local func_name = parts[#parts]
+                    local extracted = extract_function(source_code, func_name)
+    
+                    if extracted then
+                        new_inst.Source =
+                            header .. "\n\nlocal module = {}\n\n" ..
+                            extracted .. "\n\nreturn module"
+                    else
+                        new_inst.Source =
+                            header .. "\n\nlocal module = {}\n\n-- fallback\n" ..
+                            source_code .. "\n\nreturn module"
+                    end
+    
+                elseif instance_type == "Script" then
+                    new_inst.Source =
+                        header .. "\n\n-- reconstructed script\n" ..
+                        source_code
+                end
+    
+                new_inst.Parent = current
+                table.insert(created, new_inst.Name .. " [" .. instance_type .. "]")
+                current = new_inst
+            else
+                current = existing
+            end
+        end
+    
+        if #created > 0 then
+            gui_log("Created: " .. table.concat(created, " → "))
+            gui_log("   ↳ From: " .. source_name)
+        end
+    
+        return true
+    end
+    
+    -- scannin thing idk much i skidded it
+    local function scan_source(source, source_name)
+        local service_variables = {}
+    
+        for var_name in string.gmatch(source, 'local%s+([%w_]+)%s*=%s*game:GetService%("([%w_]+)"%)') do
+            if source:find('ServerStorage') then
+                service_variables[var_name] = "server_storage"
+            elseif source:find('ServerScriptService') then
+                service_variables[var_name] = "server_script_service"
+            end
+        end
+    
+        for var_name, service_name in pairs(service_variables) do
+            for path in string.gmatch(source, var_name .. "%.([%w_%.]+)") do
+                recreate_path(service_name .. "." .. path, source_name, source, path)
+            end
+        end
+    
+        for path in string.gmatch(source, "ServerStorage%.([%w_%.]+)") do
+            recreate_path("server_storage." .. path, source_name, source, path)
+        end
+    
+        for path in string.gmatch(source, "ServerScriptService%.([%w_%.]+)") do
+            recreate_path("server_script_service." .. path, source_name, source, path)
+        end
+    end
+    
+    -- run BOOM
+    gui_log("YSS Reconstruction Scan Starting...")
+    
+    local function scan_container(container)
+        for _, obj in ipairs(container:GetDescendants()) do
+            if obj:IsA("Script") or obj:IsA("LocalScript") or obj:IsA("ModuleScript") then
+                local success, result = pcall(function()
+                    return decompile(obj)
+                end)
+    
+                task.wait(2)
+    
+                if success and type(result) == "string" then
+                    scan_source(result, obj:GetFullName())
+                end
+            end
+        end
+    end
+    
+    local replicated = game:FindFirstChild("ReplicatedStorage")
+    if replicated then
+        scan_container(replicated)
+    end
+    
+    for _, obj in ipairs(game:GetChildren()) do
+        if obj.Name ~= "ReplicatedStorage" then
+            scan_container(obj)
+        end
+    end
+    
+    gui_log("Reconstruction Scan Complete √.")
+end)
+
+
+-- THIS WAS ORIGINAL CODE, BUT IT DOESNT WORK ON SERVERSTORAGE
+
+task.spawn(function()
+    
+    -- This Was Authored By: Alurion
+    
+    -- Changelogs
+    -- Updates V1:
+    -- Works (v0.1)
+    -- Decompiler Broken
+    -- Decompiler Fixed
+    -- V2 UPDATES:
+    -- 2swait
+    -- Used A.I to fix variables, (Bad Vars i made it was all abcs)
+    -- Used A.I For better comments 
+    -- Used A.I To fix crash errors
+    
+    local header = "--[[Decompiled with YSS Engine]]"
+    
+    local allowed_roots = {
+        server_storage = true,
+        server_script_service = true,
+    }
+    
+    -- debug toggle
+    local debug_mode = _G.Debug == true
+    
+    local function dbg_log(...)
+        if debug_mode then
+            print("[YSS DEBUG]:", ...)
+        end
+    end
+    
+    -- check if name ends with S (indicates folder)
+    local function is_folder(name)
+        return name:sub(-1):lower() == "s"
+    end
+    
+    -- determine if something is a module based on name containing Service/Module (but not ending in S)
+    local function is_module(name)
+        local lower = name:lower()
+        return (lower:find("service") or lower:find("module")) and not is_folder(name)
+    end
+    
+    -- get instance type for path element
+    local function get_instance_type(name, index, total_parts)
+        local is_last = (index == total_parts)
+        
+        -- ends with S = folder
+        if is_folder(name) then
+            return "Folder"
+        end
+        
+        -- last element that doesn't end with S = actual script/module
+        if is_last then
+            if is_module(name) then
+                return "ModuleScript"
+            end
+            return "Script"
+        end
+        
+        -- intermediate without S = folder still (like "SomeFolder" without S)
+        return "Folder"
+    end
+    
+    local function create_gui()
+        local screen_gui = Instance.new("ScreenGui")
+        screen_gui.Name = "YSS_Debug_V2"
+        screen_gui.ResetOnSpawn = false
+        screen_gui.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+    
+        local frame = Instance.new("Frame")
+        frame.Size = UDim2.new(0, 600, 0, 400)
+        frame.Visible = false
+        frame.Position = UDim2.new(0.5, -300, 0.5, -200)
+        frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+        frame.Parent = screen_gui
+    
+        local scrolling = Instance.new("ScrollingFrame")
+        scrolling.Size = UDim2.new(1, -10, 1, -10)
+        scrolling.Position = UDim2.new(0, 5, 0, 5)
+        scrolling.CanvasSize = UDim2.new(0, 0, 0, 0)
+        scrolling.ScrollBarImageColor3 = Color3.new(1, 1, 1)
+        scrolling.Parent = frame
+    
+        return scrolling
+    end
+    
+    local log_container = create_gui()
+    
+    local function gui_log(text)
+        print("[YSS SCANNER 2]: " .. text)
+    
+        local label = Instance.new("TextLabel")
+        label.Size = UDim2.new(1, -10, 0, 20)
+        label.BackgroundTransparency = 1
+        label.TextColor3 = Color3.new(1, 1, 1)
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Text = text
+        label.Parent = log_container
+    
+        label.Position = UDim2.new(0, 0, 0, #log_container:GetChildren() * 20)
+        log_container.CanvasSize = UDim2.new(0, 0, 0, #log_container:GetChildren() * 20)
+    end
+    
+    local function recreate_path(path_string, source_name)
+        local parts = string.split(path_string, ".")
+        if #parts < 2 then return false end
+    
+        local root_name = parts[1]
+        if not allowed_roots[root_name] then return false end
+    
+        local root = game:FindFirstChild(root_name == "server_storage" and "ServerStorage" or "ServerScriptService")
+        if not root then return false end
+    
+        local current = root
+        local created = {}
+    
+        for i = 2, #parts do
+            local name = parts[i]
+            local instance_type = get_instance_type(name, i, #parts)
+    
+            local existing = current:FindFirstChild(name)
+    
+            if not existing then
+                local new_inst = Instance.new(instance_type)
+                new_inst.Name = name
+    
+                if instance_type == "Script" or instance_type == "ModuleScript" then
+                    new_inst.Source = header
+                end
+    
+                new_inst.Parent = current
+                table.insert(created, new_inst.Name .. " [" .. instance_type .. "]")
+                current = new_inst
+            else
+                current = existing
+            end
+        end
+    
+        if #created > 0 then
+            gui_log("Created: " .. table.concat(created, " → "))
+            gui_log("   ↳ From: " .. source_name)
+        end
+    
+        return true
+    end
+    
+    local function scan_source(source, source_name)
+        local service_variables = {}
+        local found_anything = false
+    
+        -- detect: local xxx = game.ServerStorage
+        for var_name in string.gmatch(source, 'local%s+([%w_]+)%s*=%s*game%.ServerStorage') do
+            service_variables[var_name] = "server_storage"
+            found_anything = true
+        end
+    
+        for var_name in string.gmatch(source, 'local%s+([%w_]+)%s*=%s*game%.ServerScriptService') do
+            service_variables[var_name] = "server_script_service"
+            found_anything = true
+        end
+    
+        -- detect: local xxx = game:GetService("ServerStorage")
+        for var_name in string.gmatch(source, 'local%s+([%w_]+)%s*=%s*game:GetService%("ServerStorage"%)') do
+            service_variables[var_name] = "server_storage"
+            found_anything = true
+        end
+    
+        for var_name in string.gmatch(source, 'local%s+([%w_]+)%s*=%s*game:GetService%("ServerScriptService"%)') do
+            service_variables[var_name] = "server_script_service"
+            found_anything = true
+        end
+    
+        -- detect general GetService
+        for var_name, svc in string.gmatch(source, 'local%s+([%w_]+)%s*=%s*game:GetService%("([%w_]+)"%)') do
+            local mapped = svc == "ServerStorage" and "server_storage" or (svc == "ServerScriptService" and "server_script_service" or nil)
+            if mapped and allowed_roots[mapped] then
+                service_variables[var_name] = mapped
+                found_anything = true
+            end
+        end
+    
+        -- scan for variable usage: xxx.Something
+        for var_name, service_name in pairs(service_variables) do
+            for path in string.gmatch(source, var_name .. "%.([%w_%.]+)") do
+                recreate_path(service_name .. "." .. path, source_name)
+                found_anything = true
+            end
+        end
+    
+        -- fallback patterns
+        for path in string.gmatch(source, "ServerStorage%.([%w_%.]+)") do
+            recreate_path("server_storage." .. path, source_name)
+            found_anything = true
+        end
+    
+        for path in string.gmatch(source, "ServerScriptService%.([%w_%.]+)") do
+            recreate_path("server_script_service." .. path, source_name)
+            found_anything = true
+        end
+    
+        for path in string.gmatch(source, "game%.ServerStorage%.([%w_%.]+)") do
+            recreate_path("server_storage." .. path, source_name)
+            found_anything = true
+        end
+    
+        for path in string.gmatch(source, "game%.ServerScriptService%.([%w_%.]+)") do
+            recreate_path("server_script_service." .. path, source_name)
+            found_anything = true
+        end
+    
+        return found_anything
+    end
+    
+    gui_log("YSS V2 Scan Starting...")
+    
+    local total = 0
+    local success_count = 0
+    local found_count = 0
+    
+    local function scan_container(container)
+        for _, obj in ipairs(container:GetDescendants()) do
+            if obj:IsA("Script") or obj:IsA("LocalScript") or obj:IsA("ModuleScript") then
+                total += 1
+                local success, result = pcall(function()
+                    return decompile(obj)
+                end)
+                
+                task.wait(2)
+    
+                if success and type(result) == "string" and #result > 0 then
+                    success_count += 1
+                    local found = scan_source(result, obj:GetFullName())
+                    if found then
+                        found_count += 1
+                    end
+                end
+            end
+        end
+    end
+    
+    local replicated = game:FindFirstChild("ReplicatedStorage")
+    if replicated then
+        scan_container(replicated)
+    end
+    
+    for _, obj in ipairs(game:GetChildren()) do
+        if obj.Name ~= "ReplicatedStorage" then
+            scan_container(obj)
+        end
+    end
+    
+    gui_log("V2 Scan Complete √.")
+    gui_log("Total Scanned: " .. total)
+end)
